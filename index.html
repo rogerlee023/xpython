@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPython - Python编程学与练一体化平台</title>
+    <meta name="description" content="XPython，一站式Python学习IDE，内置教材+DeepSeek AI辅助，解决编程学练脱节痛点，支持免费入门，可直接下载。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.1);
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 font-sans">
+    <!-- 顶部导航（单页锚点） -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-primary">XPython</div>
+            <div class="hidden md:flex gap-6 text-sm">
+                <a href="#home" class="hover:text-primary transition-colors">首页</a>
+                <a href="#feature" class="hover:text-primary transition-colors">核心功能</a>
+                <a href="#version" class="hover:text-primary transition-colors">产品版本</a>
+                <a href="#download" class="hover:text-primary transition-colors">下载与联系</a>
+                <a href="#footer" class="hover:text-primary transition-colors">页脚</a>
+            </div>
+            <a href="#download" class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition-all">
+                <i class="fa fa-download mr-1"></i> 立即下载
+            </a>
+        </div>
+    </nav>
+
+    <!-- 首屏 Hero 增加 id="home" -->
+    <section id="home" class="bg-gradient-to-br from-primary to-blue-800 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-4 text-shadow">XPython</h1>
+            <h2 class="text-[clamp(1.2rem,2vw,1.6rem)] opacity-90 mb-8">Python编程学与练一体化平台</h2>
+            <p class="max-w-3xl mx-auto text-lg opacity-95 mb-10">
+                一站式解决编程学习「学、练、纠错、沉淀」，告别学练脱节，开箱即用的Python学习IDE
+            </p>
+            <a href="#download" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-lg text-lg hover:bg-slate-100 transition-all card-shadow">
+                <i class="fa fa-download mr-2"></i> 获取 XPython
+            </a>
+        </div>
+    </section>
+
+    <!-- 痛点简介 -->
+    <section class="py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-2xl font-bold text-dark text-center mb-6">为什么选择 XPython？</h3>
+            <div class="bg-white rounded-xl p-8 card-shadow">
+                <p class="text-lg leading-relaxed">
+                    初学Python经常遇到：看教程能看懂，动手写代码就报错；环境配置繁琐；AI工具、课程、练习相互割裂；错题无法沉淀复盘。
+                    <br><br>
+                    XPython 将代码运行环境、AI智能助手、成套教材、个人错题知识库集成一体，无需复杂配置，把学习、编码、练习、纠错全部整合在一处，显著提升Python学习效率。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能模块 -->
+    <section id="feature" class="py-12 px-4 bg-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold text-dark text-center mb-12">✨ 核心功能</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 功能1 -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-code"></i></div>
+                    <h4 class="text-xl font-bold mb-3">一体化Python编程IDE环境</h4>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>✅ 代码编辑、实时执行、错误捕获处理</li>
+                        <li>✅ IELE图形化集成学习环境</li>
+                        <li>✅ 图形化Shell，支持命令+菜单双驱动</li>
+                        <li>✅ 单行编辑 + 全屏编辑器</li>
+                        <li>✅ 语法高亮、智能代码补全、自动缩进</li>
+                    </ul>
+                </div>
+                <!-- 功能2 -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-robot"></i></div>
+                    <h4 class="text-xl font-bold mb-3">DeepSeek AI编程助手</h4>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>✅ 智能代码解析、自动纠错、代码扩写、学习报告</li>
+                        <li>✅ API全自动智能体模式：自行开通DeepSeek API，按量计费</li>
+                        <li>✅ 网页半自动模式：完全免费使用</li>
+                    </ul>
+                </div>
+                <!-- 功能3 -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-book"></i></div>
+                    <h4 class="text-xl font-bold mb-3">内置系统化编程教材｜点·线·面三维学习</h4>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>📖 Python零基础编程</li>
+                        <li>📖 Python初级编程</li>
+                        <li>📖 Python编程进阶</li>
+                        <li>📖 高频错题解析100例</li>
+                        <li>📖 高频代码与算法100例</li>
+                    </ul>
+                    <p class="mt-3 text-slate-500 text-sm">线=顺序章节学习｜点=知识点专项｜面=综合案例实战</p>
+                </div>
+                <!-- 功能4 -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-database"></i></div>
+                    <h4 class="text-xl font-bold mb-3">个人专属编程知识库</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        自动收集编程报错案例，智能分析错误原因与修复方案，沉淀专属错题知识库。使用时间越长，积累的学习资料越贴合你的薄弱点。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品版本 -->
+    <section id="version" class="py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-2xl font-bold text-dark text-center mb-10">📦 产品版本</h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-lg card-shadow text-center">XPython 免费入门版</div>
+                <div class="bg-white p-5 rounded-lg card-shadow text-center">XPython 基础版</div>
+                <div class="bg-white p-5 rounded-lg card-shadow text-center">XPython 标准版</div>
+                <div class="bg-white p-5 rounded-lg card-shadow text-center">XPython 校园版</div>
+                <div class="bg-white p-5 rounded-lg card-shadow text-center">XPython 企业版</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载 & 联系区域 -->
+    <section id="download" class="py-16 px-4 bg-dark text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-6">📥 软件下载 | 联系开发者</h3>
+            <p class="text-lg mb-6">访问官方网站获取最新安装包</p>
+            <a href="shturl.cc/DxJYjM7SIaIgHIS" target="_blank" class="inline-block bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg text-xl transition-all">
+                <i class="fa fa-external-link mr-2"></i> 访问官网下载
+            </a>
+
+            <div class="mt-10 text-left inline-block bg-slate-800 p-6 rounded-lg">
+                <p class="mb-3"><i class="fa fa-envelope-o mr-2"></i>开发者邮箱：rogerlee023@foxmail.com</p>
+                <p class="mb-3"><i class="fa fa-wechat mr-2"></i>开发者微信：XPython-CQ</p>
+                <p class="mt-6 text-slate-300 text-sm">软件著作权登记号：xxxxxxxxxxxxxxx</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 增加 id="footer" -->
+    <footer id="footer" class="py-8 text-center text-slate-500 text-sm">
+        <p>© 2026 XPython. All Rights Reserved.</p>
+        <p class="mt-2">本页面为产品介绍落地页，Github Pages静态站点</p>
+    </footer>
+</body>
+</html>
