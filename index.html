@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XPython V2.0 - Python编程学与练一体化平台</title>
     <meta name="description" content="XPython，一站式Python学习IDE，内置教材+DeepSeek AI辅助，解决编程学练脱节痛点，支持免费入门，可直接下载。">
+    <!-- Logo / Favicon：把 logo.svg 放到仓库根目录或 assets/ 下，然后替换下面的路径 -->
+    <link rel="icon" type="image/png" href="./XPython_logo1.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -24,29 +26,27 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .card-shadow {
-                box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.1);
-            }
-            html {
-                scroll-behavior: smooth;
-            }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .card-shadow { box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.1); }
+            html { scroll-behavior: smooth; }
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700 font-sans">
-    <!-- 顶部导航（单页锚点） -->
+    <!-- 顶部导航 -->
     <nav class="bg-white shadow-sm sticky top-0 z-10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold text-primary">XPython</div>
+            <div class="flex items-center gap-2">
+                <!-- Logo 图片：替换 ./logo.svg 为你的实际路径 -->
+                <img src="./XPython_logo1.png" alt="XPython Logo" class="w-8 h-8 rounded-lg object-contain">
+                <span class="text-xl font-bold text-primary">XPython</span>
+            </div>
             <div class="hidden md:flex gap-6 text-sm">
                 <a href="#home" class="hover:text-primary transition-colors">首页</a>
                 <a href="#feature" class="hover:text-primary transition-colors">核心功能</a>
                 <a href="#version" class="hover:text-primary transition-colors">产品版本</a>
+                <a href="#faq" class="hover:text-primary transition-colors">常见问题</a>
                 <a href="#download" class="hover:text-primary transition-colors">下载与联系</a>
-                <a href="#footer" class="hover:text-primary transition-colors">页脚</a>
             </div>
             <a href="#download" class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition-all">
                 <i class="fa fa-download mr-1"></i> 立即下载
@@ -54,7 +54,7 @@
         </div>
     </nav>
 
-    <!-- 首屏 Hero 增加 id="home" -->
+    <!-- Hero -->
     <section id="home" class="bg-gradient-to-br from-primary to-blue-800 text-white py-20 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-4 text-shadow">XPython</h1>
@@ -82,12 +82,11 @@
         </div>
     </section>
 
-    <!-- 核心功能模块 -->
+    <!-- 核心功能 -->
     <section id="feature" class="py-12 px-4 bg-slate-100">
         <div class="max-w-6xl mx-auto">
             <h3 class="text-2xl font-bold text-dark text-center mb-12">✨ 核心功能</h3>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- 功能1 -->
                 <div class="bg-white p-6 rounded-xl card-shadow">
                     <div class="text-primary text-3xl mb-4"><i class="fa fa-code"></i></div>
                     <h4 class="text-xl font-bold mb-3">一体化Python编程IDE环境</h4>
@@ -99,7 +98,6 @@
                         <li>✅ 语法高亮、智能代码补全、自动缩进</li>
                     </ul>
                 </div>
-                <!-- 功能2 -->
                 <div class="bg-white p-6 rounded-xl card-shadow">
                     <div class="text-primary text-3xl mb-4"><i class="fa fa-robot"></i></div>
                     <h4 class="text-xl font-bold mb-3">DeepSeek AI编程助手</h4>
@@ -109,7 +107,6 @@
                         <li>✅ 网页半自动模式：完全免费使用</li>
                     </ul>
                 </div>
-                <!-- 功能3 -->
                 <div class="bg-white p-6 rounded-xl card-shadow">
                     <div class="text-primary text-3xl mb-4"><i class="fa fa-book"></i></div>
                     <h4 class="text-xl font-bold mb-3">内置系统化编程教材｜点·线·面三维学习</h4>
@@ -122,7 +119,6 @@
                     </ul>
                     <p class="mt-3 text-slate-500 text-sm">线=顺序章节学习｜点=知识点专项｜面=综合案例实战</p>
                 </div>
-                <!-- 功能4 -->
                 <div class="bg-white p-6 rounded-xl card-shadow">
                     <div class="text-primary text-3xl mb-4"><i class="fa fa-database"></i></div>
                     <h4 class="text-xl font-bold mb-3">个人专属编程知识库</h4>
@@ -148,14 +144,113 @@
         </div>
     </section>
 
-    <!-- 下载 & 联系区域 -->
+    <!-- Q/A 常见问题 -->
+    <section id="faq" class="py-16 px-4 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl font-bold text-dark text-center mb-10">❓ 常见问题（Q/A）</h3>
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="bg-white rounded-lg card-shadow group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-dark list-none">
+                        <span>Q：下载/安装时 Windows 弹出蓝色 SmartScreen 警告，怎么办？</span>
+                        <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        <p class="mb-2"><strong>原因：</strong>XPython 目前处于初期推广阶段，尚未购买商业代码签名证书。Windows SmartScreen 对未签名的、下载量较少的程序会默认保持谨慎，这是正常的保护机制，<strong>不代表文件含有病毒</strong>[citation:8]。</p>
+                        <p class="mb-2"><strong>操作步骤：</strong></p>
+                        <ol class="list-decimal list-inside space-y-1 mb-3">
+                            <li>在蓝色提示窗口中点击 <strong>“更多信息”</strong>；</li>
+                            <li>确认展开后点击 <strong>“仍要运行”</strong>；</li>
+                            <li>安装即可正常进行。</li>
+                        </ol>
+                        <p class="text-sm text-slate-500">你可以在本地用 PowerShell 运行 <code class="bg-slate-100 px-1 rounded">Get-FileHash 文件名.exe</code>，与 Release Notes 中公布的 SHA-256 值比对，进一步确认文件完整性。</p>
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="bg-white rounded-lg card-shadow group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-dark list-none">
+                        <span>Q：360 安全卫士把安装包报为病毒并移入隔离区，如何处理？</span>
+                        <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        <p class="mb-2"><strong>原因：</strong>360 的启发式引擎对无数字签名、下载量较少的新程序较为敏感，容易出现误报。开发者已向 360 提交误报申诉，审核通过后病毒库更新即可消除。</p>
+                        <p class="mb-2"><strong>临时操作步骤：</strong></p>
+                        <ol class="list-decimal list-inside space-y-1 mb-2">
+                            <li>打开 360 安全卫士 → <strong>「查杀修复」</strong>；</li>
+                            <li>点击右下角 <strong>「恢复区」</strong>，找到 XPython 安装包，点击 <strong>「恢复」</strong>[citation:5]；</li>
+                            <li>进入 <strong>「设置」→「病毒查杀设置」→「信任区」</strong>，将安装包添加为信任文件[citation:5]。</li>
+                        </ol>
+                        <p class="text-sm text-slate-500">如果恢复后仍然被拦截，可以暂时关闭 360 的实时防护完成安装，安装后重新开启。建议优先等待 360 官方病毒库更新。</p>
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="bg-white rounded-lg card-shadow group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-dark list-none">
+                        <span>Q：为什么 XPython 没有软件签名？以后会有吗？</span>
+                        <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        <p>代码签名证书的年费成本较高（正规 OV 证书约 $150–300/年），且即使购买签名，SmartScreen 信誉仍需数周至数百次干净安装才能积累起来，<strong>并不能立即消除警告</strong>[citation:8]。现阶段我们将成本集中在功能开发上，待用户规模稳定后会评估签名方案。在此之前，我们通过公布文件哈希、提供 VirusTotal 自查链接等方式，让用户可以自行验证文件安全。</p>
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="bg-white rounded-lg card-shadow group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-dark list-none">
+                        <span>Q：安装或运行时出现 Windows 蓝屏（BSOD）怎么办？</span>
+                        <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        <p class="mb-2">蓝屏通常由驱动冲突、系统文件损坏或硬件问题引起，与单一应用程序的直接关联较少见。建议按以下顺序排查：</p>
+                        <ol class="list-decimal list-inside space-y-1 mb-2">
+                            <li>重启电脑，观察是否复现；</li>
+                            <li>进入 <strong>设备管理器</strong>，检查是否有带黄色感叹号的设备，更新显卡/芯片组驱动；</li>
+                            <li>以管理员身份运行命令提示符，执行 <code class="bg-slate-100 px-1 rounded">sfc /scannow</code> 修复系统文件；</li>
+                            <li>如果蓝屏仅在运行 XPython 时出现，请通过邮箱联系我们，并提供蓝屏错误代码（如 0x0000003B 等）和系统版本信息。</li>
+                        </ol>
+                        <p class="text-sm text-slate-500">如果蓝屏频繁出现且与 XPython 无关，建议使用 Windows 内存诊断工具（搜索“Windows 内存诊断”）检查 RAM 是否有问题。</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载 & 联系 -->
     <section id="download" class="py-16 px-4 bg-dark text-white">
         <div class="max-w-4xl mx-auto text-center">
             <h3 class="text-2xl font-bold mb-6">📥 软件下载 | 联系开发者</h3>
-            <p class="text-lg mb-6">访问官方网站获取最新安装包</p>
-            <a href="https://gh-proxy.com/https://github.com/rogerlee023/xpython/releases/download/v1_0/XPython1.0_Setup.exe" target="_blank" class="inline-block bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg text-xl transition-all">
-                <i class="fa fa-external-link mr-2"></i> 访问官网下载
-            </a>
+            <p class="text-lg mb-4">选择任意线路下载 XPython 安装包（约 183 MB）</p>
+            <p class="text-sm text-slate-400 mb-6">如某条线路速度慢或失效，请切换其他线路。推荐优先使用线路一。</p>
+
+            <!-- 多线路下载按钮 -->
+            <div class="space-y-3 max-w-md mx-auto">
+                <!-- 线路一：gh-proxy.com（已验证可用） -->
+                <a href="https://gh-proxy.com/https://github.com/rogerlee023/xpython/releases/download/v1_0/XPython1.0_Setup.exe"
+                   target="_blank" rel="noopener"
+                   class="block w-full bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg text-lg font-semibold transition-all">
+                    <i class="fa fa-download mr-2"></i> 线路一：高速下载（推荐）
+                </a>
+
+                <!-- 线路二：ghfile.geekertao.top（已验证可用） -->
+                <a href="https://ghfile.geekertao.top/https://github.com/rogerlee023/xpython/releases/download/v1_0/XPython1.0_Setup.exe"
+                   target="_blank" rel="noopener"
+                   class="block w-full bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg text-base transition-all">
+                    <i class="fa fa-download mr-2"></i> 线路二：备用下载
+                </a>
+            </div>
+
+            <!-- SmartScreen 提示（折叠） -->
+            <details class="mt-6 max-w-md mx-auto text-left bg-slate-800 rounded-lg p-4">
+                <summary class="cursor-pointer text-amber-300 font-semibold text-sm">
+                    ⚠️ 安装时遇到 Windows 蓝色警告？点击查看解决方法
+                </summary>
+                <div class="mt-3 text-slate-300 text-sm leading-relaxed">
+                    <p class="mb-2">这是 Windows 对新软件的常规提示，不代表文件有问题。点击“更多信息”→“仍要运行”即可继续。</p>
+                    <p>如遇 360 误报隔离，请参考页面中的 <a href="#faq" class="text-primary underline">Q/A 问答</a> 恢复方法。</p>
+                </div>
+            </details>
 
             <div class="mt-10 text-left inline-block bg-slate-800 p-6 rounded-lg">
                 <p class="mb-3"><i class="fa fa-envelope-o mr-2"></i>开发者邮箱：rogerlee023@foxmail.com</p>
@@ -165,7 +260,7 @@
         </div>
     </section>
 
-    <!-- 页脚 增加 id="footer" -->
+    <!-- 页脚 -->
     <footer id="footer" class="py-8 text-center text-slate-500 text-sm">
         <p>© 2026 XPython. All Rights Reserved.</p>
         <p class="mt-2">本页面为产品介绍落地页，Github Pages静态站点</p>
